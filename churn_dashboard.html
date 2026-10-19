@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelcoChurnAgents - Churn Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { font-size: 28px; margin-bottom: 5px; color: #0f172a; }
+        h2 { font-size: 20px; margin: 30px 0 15px; color: #334155; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        .subtitle { color: #64748b; margin-bottom: 25px; font-size: 14px; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .card-label { font-size: 13px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card-value { font-size: 32px; font-weight: 700; margin-top: 5px; }
+        .card-value.red { color: #ef4444; }
+        .card-value.orange { color: #f97316; }
+        .card-value.green { color: #22c55e; }
+        .card-value.blue { color: #3b82f6; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        th { background: #1e293b; color: white; padding: 12px 15px; text-align: left; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+        td { padding: 10px 15px; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+        tr:hover { background: #f1f5f9; }
+        .agent-box { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px; border-left: 4px solid; }
+        .agent-ds { border-left-color: #3b82f6; }
+        .agent-rs { border-left-color: #22c55e; }
+        .agent-title { font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+        .rec-box { background: white; border-radius: 8px; padding: 15px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 10px; }
+        .rec-title { font-weight: 600; color: #0f172a; }
+        .rec-desc { color: #64748b; font-size: 14px; margin-top: 5px; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .badge-high { background: #fef2f2; color: #ef4444; }
+        .badge-med { background: #fff7ed; color: #f97316; }
+        .badge-low { background: #f0fdf4; color: #22c55e; }
+        .footer { text-align: center; color: #94a3b8; font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TelcoChurnAgents Dashboard</h1>
+        <p class="subtitle">Multi-Agent AI System for Customer Churn Prediction and Retention Strategy | Generated 2026-05-07 16:44:31</p>
+
+        <h2>Agent Collaboration Summary</h2>
+        <div class="agent-box agent-ds">
+            <div class="agent-title">Data Science Agent</div>
+            <div>Completed: Data loading, cleaning, EDA, model training (Logistic Regression), evaluation (ROC-AUC: 0.8417), and risk scoring of 7043 customers. Handed off technical findings to Retention Strategy Agent.</div>
+        </div>
+        <div class="agent-box agent-rs">
+            <div class="agent-title">Retention Strategy Agent</div>
+            <div>Completed: Segment analysis, churn driver interpretation, high-risk profiling, 6 retention recommendations, final report, and this dashboard. Based all analysis on Data Science Agent outputs.</div>
+        </div>
+
+        <h2>Key Metrics</h2>
+        <div class="cards">
+            <div class="card"><div class="card-label">Total Customers</div><div class="card-value blue">7,043</div></div>
+            <div class="card"><div class="card-label">High Risk</div><div class="card-value red">1,782</div></div>
+            <div class="card"><div class="card-label">Medium Risk</div><div class="card-value orange">1,663</div></div>
+            <div class="card"><div class="card-label">Low Risk</div><div class="card-value green">3,598</div></div>
+            <div class="card"><div class="card-label">Best Model</div><div class="card-value" style="font-size:20px;">Logistic Regression</div></div>
+            <div class="card"><div class="card-label">ROC-AUC</div><div class="card-value blue">0.8417</div></div>
+        </div>
+
+        <h2>Model Comparison</h2>
+        <table>
+            <thead><tr><th>Model</th><th>Accuracy</th><th>F1 Score</th><th>ROC-AUC</th></tr></thead>
+            <tbody><tr><td>Logistic Regression</td><td>0.7388</td><td>0.6143</td><td>0.8417</td></tr><tr><td>Random Forest</td><td>0.7885</td><td>0.5579</td><td>0.8242</td></tr></tbody>
+        </table>
+
+        <h2>Best Model Detailed Metrics</h2>
+        <div class="cards">
+            <div class="card"><div class="card-label">Accuracy</div><div class="card-value">0.7388</div></div>
+            <div class="card"><div class="card-label">Precision</div><div class="card-value">0.5052</div></div>
+            <div class="card"><div class="card-label">Recall</div><div class="card-value">0.7834</div></div>
+            <div class="card"><div class="card-label">F1 Score</div><div class="card-value">0.6143</div></div>
+            <div class="card"><div class="card-label">ROC-AUC</div><div class="card-value">0.8417</div></div>
+            <div class="card"><div class="card-label">PR-AUC</div><div class="card-value">0.6331</div></div>
+        </div>
+
+        <h2>Confusion Matrix</h2>
+        <table style="max-width:400px;">
+            <thead><tr><th></th><th>Predicted: No Churn</th><th>Predicted: Churn</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Actual: No Churn</strong></td><td>748</td><td>287</td></tr>
+                <tr><td><strong>Actual: Churn</strong></td><td>81</td><td>293</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Top Churn Drivers (Feature Importance)</h2>
+        <table>
+            <thead><tr><th>Rank</th><th>Feature</th><th>Importance Bar</th><th>Score</th></tr></thead>
+            <tbody><tr><td>1</td><td>Contract_Two year</td>
+        <td><div style="background:#3b82f6;height:20px;width:100%;border-radius:3px;"></div></td>
+        <td>1.4029</td></tr><tr><td>2</td><td>InternetService_Fiber optic</td>
+        <td><div style="background:#3b82f6;height:20px;width:87%;border-radius:3px;"></div></td>
+        <td>1.2268</td></tr><tr><td>3</td><td>tenure</td>
+        <td><div style="background:#3b82f6;height:20px;width:83%;border-radius:3px;"></div></td>
+        <td>1.1612</td></tr><tr><td>4</td><td>Contract_One year</td>
+        <td><div style="background:#3b82f6;height:20px;width:51%;border-radius:3px;"></div></td>
+        <td>0.7141</td></tr><tr><td>5</td><td>MonthlyCharges</td>
+        <td><div style="background:#3b82f6;height:20px;width:40%;border-radius:3px;"></div></td>
+        <td>0.5554</td></tr><tr><td>6</td><td>TotalCharges</td>
+        <td><div style="background:#3b82f6;height:20px;width:35%;border-radius:3px;"></div></td>
+        <td>0.4915</td></tr><tr><td>7</td><td>StreamingMovies_Yes</td>
+        <td><div style="background:#3b82f6;height:20px;width:30%;border-radius:3px;"></div></td>
+        <td>0.4220</td></tr><tr><td>8</td><td>PaymentMethod_Electronic check</td>
+        <td><div style="background:#3b82f6;height:20px;width:29%;border-radius:3px;"></div></td>
+        <td>0.4043</td></tr><tr><td>9</td><td>StreamingTV_Yes</td>
+        <td><div style="background:#3b82f6;height:20px;width:28%;border-radius:3px;"></div></td>
+        <td>0.3979</td></tr><tr><td>10</td><td>PhoneService_Yes</td>
+        <td><div style="background:#3b82f6;height:20px;width:25%;border-radius:3px;"></div></td>
+        <td>0.3449</td></tr></tbody>
+        </table>
+
+        <h2>Highest Churn Rate Segments</h2>
+        <table>
+            <thead><tr><th>Category</th><th>Segment</th><th>Churn Rate</th><th>Customers</th></tr></thead>
+            <tbody><tr><td>tenure_group</td><td>0-12 months</td>
+        <td><div style="background:#ef4444;height:16px;width:47%;border-radius:3px;display:inline-block;"></div> 47.4%</td>
+        <td>2186</td></tr><tr><td>PaymentMethod</td><td>Electronic check</td>
+        <td><div style="background:#ef4444;height:16px;width:45%;border-radius:3px;display:inline-block;"></div> 45.3%</td>
+        <td>2365</td></tr><tr><td>Contract</td><td>Month-to-month</td>
+        <td><div style="background:#ef4444;height:16px;width:43%;border-radius:3px;display:inline-block;"></div> 42.7%</td>
+        <td>3875</td></tr><tr><td>InternetService</td><td>Fiber optic</td>
+        <td><div style="background:#ef4444;height:16px;width:42%;border-radius:3px;display:inline-block;"></div> 41.9%</td>
+        <td>3096</td></tr><tr><td>OnlineSecurity</td><td>No</td>
+        <td><div style="background:#ef4444;height:16px;width:42%;border-radius:3px;display:inline-block;"></div> 41.8%</td>
+        <td>3498</td></tr><tr><td>SeniorCitizen</td><td>1.0</td>
+        <td><div style="background:#ef4444;height:16px;width:42%;border-radius:3px;display:inline-block;"></div> 41.7%</td>
+        <td>1142</td></tr><tr><td>TechSupport</td><td>No</td>
+        <td><div style="background:#ef4444;height:16px;width:42%;border-radius:3px;display:inline-block;"></div> 41.6%</td>
+        <td>3473</td></tr><tr><td>PaperlessBilling</td><td>Yes</td>
+        <td><div style="background:#ef4444;height:16px;width:34%;border-radius:3px;display:inline-block;"></div> 33.6%</td>
+        <td>4171</td></tr><tr><td>tenure_group</td><td>13-24 months</td>
+        <td><div style="background:#ef4444;height:16px;width:29%;border-radius:3px;display:inline-block;"></div> 28.7%</td>
+        <td>1024</td></tr><tr><td>SeniorCitizen</td><td>0.0</td>
+        <td><div style="background:#ef4444;height:16px;width:24%;border-radius:3px;display:inline-block;"></div> 23.6%</td>
+        <td>5901</td></tr><tr><td>tenure_group</td><td>25-48 months</td>
+        <td><div style="background:#ef4444;height:16px;width:20%;border-radius:3px;display:inline-block;"></div> 20.4%</td>
+        <td>1594</td></tr><tr><td>PaymentMethod</td><td>Mailed check</td>
+        <td><div style="background:#ef4444;height:16px;width:19%;border-radius:3px;display:inline-block;"></div> 19.1%</td>
+        <td>1612</td></tr></tbody>
+        </table>
+
+        <h2>Top 25 Highest-Risk Customers</h2>
+        <table>
+            <thead><tr><th>Customer ID</th><th>Churn Probability</th><th>Risk Level</th><th>Contract</th><th>Tenure</th><th>Monthly Charges</th></tr></thead>
+            <tbody><tr><td>9497-QCMMS</td><td style="color:#ef4444;font-weight:bold;">0.9384</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$93.55</td></tr><tr><td>9300-AGZNL</td><td style="color:#ef4444;font-weight:bold;">0.9380</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$94.00</td></tr><tr><td>5178-LMXOP</td><td style="color:#ef4444;font-weight:bold;">0.9379</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$95.10</td></tr><tr><td>4424-TKOPW</td><td style="color:#ef4444;font-weight:bold;">0.9367</td>
+        <td>High Risk</td><td>Month-to-month</td><td>2</td><td>$93.85</td></tr><tr><td>2720-WGKHP</td><td style="color:#ef4444;font-weight:bold;">0.9363</td>
+        <td>High Risk</td><td>Month-to-month</td><td>2</td><td>$94.00</td></tr><tr><td>5567-WSELE</td><td style="color:#ef4444;font-weight:bold;">0.9352</td>
+        <td>High Risk</td><td>Month-to-month</td><td>3</td><td>$94.60</td></tr><tr><td>5150-ITWWB</td><td style="color:#ef4444;font-weight:bold;">0.9345</td>
+        <td>High Risk</td><td>Month-to-month</td><td>3</td><td>$94.85</td></tr><tr><td>7024-OHCCK</td><td style="color:#ef4444;font-weight:bold;">0.9344</td>
+        <td>High Risk</td><td>Month-to-month</td><td>2</td><td>$93.85</td></tr><tr><td>7216-EWTRS</td><td style="color:#ef4444;font-weight:bold;">0.9322</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$100.80</td></tr><tr><td>1374-DMZUI</td><td style="color:#ef4444;font-weight:bold;">0.9314</td>
+        <td>High Risk</td><td>Month-to-month</td><td>4</td><td>$94.30</td></tr><tr><td>8098-LLAZX</td><td style="color:#ef4444;font-weight:bold;">0.9297</td>
+        <td>High Risk</td><td>Month-to-month</td><td>4</td><td>$95.45</td></tr><tr><td>0295-PPHDO</td><td style="color:#ef4444;font-weight:bold;">0.9266</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$95.45</td></tr><tr><td>8149-RSOUN</td><td style="color:#ef4444;font-weight:bold;">0.9265</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$93.85</td></tr><tr><td>4910-GMJOT</td><td style="color:#ef4444;font-weight:bold;">0.9255</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$94.60</td></tr><tr><td>6861-XWTWQ</td><td style="color:#ef4444;font-weight:bold;">0.9255</td>
+        <td>High Risk</td><td>Month-to-month</td><td>7</td><td>$99.25</td></tr><tr><td>7851-WZEKY</td><td style="color:#ef4444;font-weight:bold;">0.9231</td>
+        <td>High Risk</td><td>Month-to-month</td><td>2</td><td>$95.15</td></tr><tr><td>3049-SOLAY</td><td style="color:#ef4444;font-weight:bold;">0.9225</td>
+        <td>High Risk</td><td>Month-to-month</td><td>3</td><td>$95.20</td></tr><tr><td>8884-ADFVN</td><td style="color:#ef4444;font-weight:bold;">0.9225</td>
+        <td>High Risk</td><td>Month-to-month</td><td>7</td><td>$101.95</td></tr><tr><td>5419-JPRRN</td><td style="color:#ef4444;font-weight:bold;">0.9218</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$101.45</td></tr><tr><td>3158-MOERK</td><td style="color:#ef4444;font-weight:bold;">0.9216</td>
+        <td>High Risk</td><td>Month-to-month</td><td>2</td><td>$96.00</td></tr><tr><td>4822-RVYBB</td><td style="color:#ef4444;font-weight:bold;">0.9214</td>
+        <td>High Risk</td><td>Month-to-month</td><td>8</td><td>$100.60</td></tr><tr><td>4826-XTSOH</td><td style="color:#ef4444;font-weight:bold;">0.9211</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$86.05</td></tr><tr><td>1069-XAIEM</td><td style="color:#ef4444;font-weight:bold;">0.9206</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$85.05</td></tr><tr><td>1415-YFWLT</td><td style="color:#ef4444;font-weight:bold;">0.9202</td>
+        <td>High Risk</td><td>Month-to-month</td><td>1</td><td>$89.30</td></tr><tr><td>2545-EBUPK</td><td style="color:#ef4444;font-weight:bold;">0.9201</td>
+        <td>High Risk</td><td>Month-to-month</td><td>2</td><td>$84.05</td></tr></tbody>
+        </table>
+
+        <h2>Retention Recommendations</h2>
+        <div class="rec-box"><div class="rec-title">1. Contract Migration Program</div><div class="rec-desc">Offer 15-20% discounts for month-to-month customers switching to annual contracts. Free month bonus for two-year commitments.</div></div>
+        <div class="rec-box"><div class="rec-title">2. Autopay Incentive Program</div><div class="rec-desc">$5/month discount for electronic check users switching to autopay. $25 one-time credit for setup within 30 days.</div></div>
+        <div class="rec-box"><div class="rec-title">3. Fiber Optic Experience Improvement</div><div class="rec-desc">Bundle tech support and security at reduced rates. Create "Fiber Plus" premium bundle at 20% discount.</div></div>
+        <div class="rec-box"><div class="rec-title">4. New Customer Onboarding Campaign</div><div class="rec-desc">Structured 90-day program with check-ins. Escalating loyalty rewards at 6 and 12 months. Free tech support for first 6 months.</div></div>
+        <div class="rec-box"><div class="rec-title">5. Add-On Service Adoption Drive</div><div class="rec-desc">Free 30-day trial of tech support and online security. 25% bundle discount for multiple add-on services.</div></div>
+        <div class="rec-box"><div class="rec-title">6. Senior Citizen Retention Program</div><div class="rec-desc">Dedicated support line, simplified billing, in-home setup assistance, and 10% senior loyalty discount.</div></div>
+
+        <div class="footer">
+            TelcoChurnAgents Multi-Agent AI System | Data Science Agent + Retention Strategy Agent | Generated 2026-05-07
+        </div>
+    </div>
+</body>
+</html>

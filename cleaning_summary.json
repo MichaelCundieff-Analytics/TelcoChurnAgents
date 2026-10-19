@@ -1,0 +1,36 @@
+{
+  "original_rows": 7043,
+  "cleaned_rows": 7043,
+  "rows_removed": 0,
+  "total_charges_missing_filled": 11,
+  "total_charges_fill_value": 0.0,
+  "churn_encoding": {
+    "Yes": 1,
+    "No": 0
+  },
+  "customerID_preserved": true,
+  "remaining_missing_values": 0,
+  "columns_in_cleaned_data": [
+    "customerID",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges",
+    "Churn"
+  ]
+}

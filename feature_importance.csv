@@ -1,0 +1,31 @@
+feature,importance,importance_type,rank
+Contract_Two year,1.4028881793498533,absolute_coefficient,1
+InternetService_Fiber optic,1.2267564611201895,absolute_coefficient,2
+tenure,1.1612304244231446,absolute_coefficient,3
+Contract_One year,0.7141222563693908,absolute_coefficient,4
+MonthlyCharges,0.5554309307915027,absolute_coefficient,5
+TotalCharges,0.4915478088543093,absolute_coefficient,6
+StreamingMovies_Yes,0.42201958958962854,absolute_coefficient,7
+PaymentMethod_Electronic check,0.4042543851609255,absolute_coefficient,8
+StreamingTV_Yes,0.39787269203868786,absolute_coefficient,9
+PhoneService_Yes,0.34493847802946304,absolute_coefficient,10
+PaperlessBilling_Yes,0.3375324068311371,absolute_coefficient,11
+OnlineSecurity_Yes,0.334711518598142,absolute_coefficient,12
+MultipleLines_Yes,0.32605400162543385,absolute_coefficient,13
+TechSupport_Yes,0.2666960695268492,absolute_coefficient,14
+Dependents_Yes,0.23115231662532665,absolute_coefficient,15
+MultipleLines_No phone service,0.1912063293660858,absolute_coefficient,16
+StreamingMovies_No internet service,0.18411162885341026,absolute_coefficient,17
+StreamingTV_No internet service,0.18411162885341026,absolute_coefficient,18
+OnlineSecurity_No internet service,0.18411162885341026,absolute_coefficient,19
+TechSupport_No internet service,0.18411162885341026,absolute_coefficient,20
+DeviceProtection_No internet service,0.18411162885341026,absolute_coefficient,21
+OnlineBackup_No internet service,0.18411162885341026,absolute_coefficient,22
+InternetService_No,0.18411162885341026,absolute_coefficient,23
+OnlineBackup_Yes,0.07014246852993303,absolute_coefficient,24
+SeniorCitizen,0.056868555145710105,absolute_coefficient,25
+PaymentMethod_Mailed check,0.04989811945510917,absolute_coefficient,26
+DeviceProtection_Yes,0.041025152412707745,absolute_coefficient,27
+gender_Male,0.03098652855082424,absolute_coefficient,28
+Partner_Yes,0.01903077185050498,absolute_coefficient,29
+PaymentMethod_Credit card (automatic),0.000653524340325983,absolute_coefficient,30
